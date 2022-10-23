@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
 
 
@@ -6,17 +7,18 @@ import Nav from 'react-bootstrap/Nav'
 const NavBar = () => {
     return (
         <div>
-            <Nav fill variant="tabs" defaultActiveKey="/home">
-                <Nav.Item>
-                    <Nav.Link href="/home">Games Home Page</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1">Add a Game</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">View Games</Nav.Link>
-                </Nav.Item>
-            </Nav>
+            <Navbar bg="dark" variant="dark">
+                {/* <img
+                    src='/Game.jpg'
+                    alt="logo"
+                /> */}
+                <Navbar.Brand href="#home">Home of the Games</Navbar.Brand>
+                <Nav className="links">
+                    <Nav.Link href="#home">Home Page</Nav.Link>
+                    <Nav.Link href="#about">Add a Game</Nav.Link>
+                    <Nav.Link href="#create">View Games</Nav.Link>
+                </Nav>
+            </Navbar>
 
 
 
