@@ -20,9 +20,6 @@ function Home() {
             </a>
           </div>
         </div>
-        <a href="/games">
-          <button className="btn-primary">Games Page</button>
-        </a>
       </main>
     </div>
   );
