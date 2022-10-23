@@ -1,27 +1,27 @@
+import './css/navbar.css'
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Home from './home';
 import Game from './game'
-import Addgame from './addgame'
-
+import AddGame from './addgame'
+import Navbar from 'react-bootstrap/Navbar';
 
 
 const NavBar = () => {
     return (
-        <div>
-            <Nav fill variant="tabs" defaultActiveKey="/home">
-                <Nav.Item>
-                    <Nav.Link href="/" element={<Home />}>Games Home Page</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/addgame" element={<Addgame />}>Add a Game</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/Game" element={<Game />}>View Games</Nav.Link>
-                </Nav.Item>
+        <Navbar bg="dark" variant="dark">
+            <img className="logo"
+                src="./logo.jpeg"
+                alt="logo" />
+            <Navbar.Brand href="/">Home of the Games</Navbar.Brand>
+            <Nav className="me-auto">
+                <Nav.Link href="/" element={<Home />}>Games Home Page</Nav.Link>
+                <Nav.Link href="/addgame" element={<AddGame />}>Add a Game</Nav.Link>
+                <Nav.Link href="/game" element={<Game />}>View Games</Nav.Link>
             </Nav>
-        </div>
+        </Navbar>
     )
 }
 
 export default NavBar
+

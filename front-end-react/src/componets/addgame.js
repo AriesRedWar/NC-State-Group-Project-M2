@@ -29,11 +29,11 @@ function AddGame() {
                     <Form.Label>Rating</Form.Label>
                     <Form.Select defaultValue="Choose...">
                         <option>Rate the Game</option>
-                        <option>1 star</option>
-                        <option>2 stars</option>
-                        <option>3 stars</option>
-                        <option>4 stars</option>
-                        <option>5 stars</option>
+                        <option>⭐️</option>
+                        <option>⭐️⭐️</option>
+                        <option>⭐️⭐️⭐️</option>
+                        <option>⭐️⭐️⭐️⭐️</option>
+                        <option>⭐️⭐️⭐️⭐️⭐️</option>
                     </Form.Select>
                 </Form.Group >
 
