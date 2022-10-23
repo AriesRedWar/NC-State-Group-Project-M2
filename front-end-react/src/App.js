@@ -1,9 +1,12 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import Home from "./componets/home";
 import Game from "./componets/game";
 import Addgame from "./componets/addgame";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
+
 
 function App() {
   return (

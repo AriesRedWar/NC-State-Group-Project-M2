@@ -1,5 +1,5 @@
 const React = require('react')
-import Game_2 from "../public/images/Game_2.jpg"
+import Game_2 from "../public/images/Game_2.png"
 
 function Home () {
     return (
