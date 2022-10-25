@@ -1,0 +1,18 @@
+.navbar-brand {
+    font-family: Rock Salt ;
+    font-weight: bold;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 60px;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: white;
+    font-family: Allerta Stencil;
+    text-align: center; 
+}

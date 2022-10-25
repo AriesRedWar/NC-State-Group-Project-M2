@@ -1,0 +1,24 @@
+
+.header {
+    font-family: Rock Salt;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 2%;
+    background-color: blanchedalmond;
+}
+
+.page_image {
+    width: 60%;
+    height: auto;
+    justify-items: center;
+    border-radius: 20%;
+    border: 4px solid white;
+    margin-left: 20%;
+   
+}
+
+.credit {
+    text-align: center;
+    font-family: Pangolin;
+    font-weight: bold;
+}

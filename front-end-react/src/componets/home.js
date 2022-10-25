@@ -1,18 +1,21 @@
+import './css/home.css'
 const React = require("react");
 
 function Home() {
   return (
     <div>
       <main>
-        <h1>Home of the Games</h1>
+        <h1 className="header">Home of the Games</h1>
         <div>
-          <img src="./Game-2.png" width="300" height="180" alt="Game logo" />
+          <img className="page_image"
+            src="./Game-2.png"
+            alt="Game logo" />
         </div>
         <div>
-          <div>
+          <div className='credit'>
             Photo by{" "}
             <a href="https://unsplash.com/@hannahrodrigo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-              Hannah Rodrigo
+              Hannah Rodriguez
             </a>{" "}
             on{" "}
             <a href="https://unsplash.com/s/photos/games?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">

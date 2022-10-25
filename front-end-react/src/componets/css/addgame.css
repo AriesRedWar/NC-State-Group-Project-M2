@@ -1,0 +1,16 @@
+.form_container {
+    /* margin-top: 10%; */
+    background-color:grey;
+    border: 5px black solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Orbitron;
+
+}
+
+.intro {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+    font-family: Orbitron;
+}
