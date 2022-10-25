@@ -1,11 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./componets/home";
 import Game from "./componets/game";
 import Addgame from "./componets/addgame";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
-
+import NotFound from "./componets/error404";
 
 function App() {
   return (
@@ -19,10 +19,19 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/game" element={<Game />} />
               <Route path="/addgame" element={<Addgame />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </header>
       </Router>
+      <footer className="footer">
+        <h4>
+          Site created by: Philip Bowman{" "}
+          <a href="https://github.com/AriesRedWar">GitHub,</a> Shetara Smith{" "}
+          <a href="https://github.com/shetara2022">GitHub,</a> Michale M.{" "}
+          <a href="https://github.com/execchef23">GitHub,</a>
+        </h4>
+      </footer>
     </div>
   );
 }
