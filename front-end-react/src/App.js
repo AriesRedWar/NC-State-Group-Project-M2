@@ -3,7 +3,8 @@ import "./App.css";
 import Home from "./componets/home";
 import Game from "./componets/game";
 import Addgame from "./componets/addgame";
-import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+import Test from "./componets/GrabDataTest";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
 import NotFound from "./componets/error404";
 
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/game" element={<Game />} />
               <Route path="/addgame" element={<Addgame />} />
+              <Route path="/test" element={<Test />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

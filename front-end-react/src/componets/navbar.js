@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 import Home from './home';
 import Game from './game'
 import AddGame from './addgame'
+import Test from "./GrabDataTest";
 import Navbar from 'react-bootstrap/Navbar';
 
 
@@ -18,6 +19,7 @@ const NavBar = () => {
                 <Nav.Link href="/" element={<Home />}>Games Home Page</Nav.Link>
                 <Nav.Link href="/addgame" element={<AddGame />}>Add a Game</Nav.Link>
                 <Nav.Link href="/game" element={<Game />}>View Games</Nav.Link>
+                <Nav.Link href="/test" element={<Test />}>Test smack</Nav.Link>
             </Nav>
         </Navbar>
     )
