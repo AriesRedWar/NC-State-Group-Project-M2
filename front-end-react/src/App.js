@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./componets/home";
 import Game from "./componets/game";
 import Addgame from "./componets/addgame";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
 import NotFound from "./componets/error404";
 
