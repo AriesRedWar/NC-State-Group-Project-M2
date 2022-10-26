@@ -19,7 +19,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/game" element={<Game />} />
               <Route path="/addgame" element={<Addgame />} />
-              <Route path="/test" element={<Test />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
@@ -28,9 +27,15 @@ function App() {
       <footer className="footer">
         <h4>
           Site created by: <br />
-          Philip Bowman{" "}<a href="https://github.com/AriesRedWar">GitHub,</a> <br />
-          Shetara Smith{" "} <a href="https://github.com/shetara2022">GitHub,</a> <br />
-          Michael Manley{" "} <a href="https://github.com/execchef23">GitHub</a>
+          Philip Bowman <a href="https://github.com/AriesRedWar">
+            GitHub,
+          </a>{" "}
+          <br />
+          Shetara Smith <a href="https://github.com/shetara2022">
+            GitHub,
+          </a>{" "}
+          <br />
+          Michael Manley <a href="https://github.com/execchef23">GitHub</a>
         </h4>
       </footer>
     </div>
