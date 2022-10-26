@@ -1,5 +1,4 @@
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import './css/addgame.css'
 
 function AddGame() {
@@ -31,11 +30,6 @@ function AddGame() {
                             <Form.Label>Game Genre</Form.Label>
                             <Form.Control type="gameGenre" placeholder="Enter game genre " />
                         </Form.Group>
-                        <div className='button'>
-                            <Button variant="secondary" size="lg">
-                                Submit
-                            </Button>
-                        </div>
 
 
 
