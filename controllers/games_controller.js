@@ -1,36 +1,14 @@
-const express = require('express');
-const games = require('../models/games');
+const express = require('express')
 const router = express.Router()
 const Game = require('../models/games')
 
-router.get('/seed', (req, res) => {
-    Game.insertMany([{
-        gamename: "Monopoly",
-        pic: "/Monopoly.jpg",
-        gametype: "Board Game",
-        genre: "family fun",
-    },
-    {
-        gamename: "Solitaire",
-        pic: "/Monopoly.jpg",
-        gametype: "Card Game",
-        genre: "Solo",
-
-    }])
-        .then(res.status(200).json({
-            message: 'Seed successful'
-        }))
-        .catch(res.status(400).json({
-            message: 'Seed unsuccessful'
-        }))
-})
 
 //Index/Get Route
 router.get('/', (req, res) => {
     console.log('WE SMACKED THE GET ROUTER /games !!!')
     Game.find()
         .then(foundGames => {
-            res.json(foundGames)
+            res.json(foundGames)    //res.render
         })
         .catch(err => {
             console.log(err)
@@ -64,8 +42,9 @@ router.put('/:id', (req, res) => {
 
 //Post Route
 router.post('/', (req, res) => {
+    console.log(req.body)
     Game.create(req.body)
-        .then(() => {
+        .then((foundGames) => {
             res.json(foundGames)
         })
         .catch(err => {
