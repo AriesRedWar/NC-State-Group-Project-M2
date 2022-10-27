@@ -1,19 +1,31 @@
-const express = require("express");
-const router = express.Router();
-const Game = require("../models/games");
+const express = require('express')
+const router = express.Router()
+const Game = require('../models/games')
+
 
 //Index/Get Route
-router.get("/", (req, res) => {
-  console.log("WE SMACKED THE GET ROUTER /games !!!");
-  Game.find()
-    .then((foundGames) => {
-      res.json(foundGames);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.json("error404");
-    });
-});
+router.get('/', (req, res) => {
+    console.log('WE SMACKED THE GET ROUTER /games !!!')
+    Game.find()
+        .then(foundGames => {
+            res.json(foundGames)    //res.render
+        })
+        .catch(err => {
+            console.log(err)
+            res.json('error404')
+        })
+})
+
+router.get('/:id', (req, res) => {
+    Game.find()
+        .then(foundGames => {
+            res.json(foundGames)
+        })
+        .catch(err => {
+            console.log(err)
+            res.render('error404')
+        })
+})
 
 router.get("/:id", (req, res) => {
   Game.find()
@@ -39,16 +51,18 @@ router.put("/:id", (req, res) => {
 });
 
 //Post Route
-router.post("/", (req, res) => {
-  Game.create(req.body)
-    .then(() => {
-      res.json(foundGames);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.render("error404");
-    });
-});
+router.post('/', (req, res) => {
+    console.log(req.body)
+    Game.create(req.body)
+        .then((foundGames) => {
+            res.json(foundGames)
+        })
+        .catch(err => {
+            console.log(err)
+            res.render('error404')
+        })
+})
+
 
 //Delete Route
 router.delete("/:id", (req, res) => {

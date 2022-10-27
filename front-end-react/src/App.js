@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./componets/home";
-import Game from "./componets/game";
+import Views from "./componets/viewgame";
 import Addgame from "./componets/addgame";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
@@ -17,7 +17,7 @@ function App() {
           <div className="display">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/game" element={<Game />} />
+              <Route path="/game" element={<Views />} />
               <Route path="/addgame" element={<Addgame />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

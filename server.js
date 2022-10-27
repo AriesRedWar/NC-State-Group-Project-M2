@@ -15,11 +15,11 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
-
   () => {
-    console.log(`connected to mongo: ${MONGO_URI}`);
+    console.log(`connected to mongo: ${MONGO_URI}`)
   }
-);
+)
+
 // Express Settings
 
 app.use(express.json());
