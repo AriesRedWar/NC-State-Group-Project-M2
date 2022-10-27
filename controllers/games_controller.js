@@ -1,34 +1,6 @@
 const express = require("express");
-const games = require("../models/games");
 const router = express.Router();
 const Game = require("../models/games");
-
-router.get("/seed", (req, res) => {
-  Game.insertMany([
-    {
-      gamename: "Monopoly",
-      pic: "/Monopoly.jpg",
-      gametype: "Board Game",
-      genre: "family fun",
-    },
-    {
-      gamename: "Solitaire",
-      pic: "/Monopoly.jpg",
-      gametype: "Card Game",
-      genre: "Solo",
-    },
-  ])
-    .then(
-      res.status(200).json({
-        message: "Seed successful",
-      })
-    )
-    .catch(
-      res.status(400).json({
-        message: "Seed unsuccessful",
-      })
-    );
-});
 
 //Index/Get Route
 router.get("/", (req, res) => {
