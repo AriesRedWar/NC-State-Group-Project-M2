@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-
+import './css/viewgame.css'
 
 function Views() {
     const [state, setState] = useState([])
@@ -14,7 +14,6 @@ function Views() {
         console.log('STUFF FROM BACKNED!!', cleanData)
         setState(cleanData)
     }
-
     console.log('State', state)
 
     useEffect(()=> {
@@ -23,6 +22,7 @@ function Views() {
       
     return (
         <div>
+
             {state.map((gameEntry) => {
                 return (
                     <div className='container'>
@@ -30,11 +30,10 @@ function Views() {
                         <h5>{gameEntry.genre}</h5>
                         <p>{gameEntry.description}</p>
                     </div>
-                )
+               )
             })}
         </div>
     )
 }
 
 export default Views
-
