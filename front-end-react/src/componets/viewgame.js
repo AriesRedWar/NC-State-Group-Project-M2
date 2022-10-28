@@ -1,21 +1,42 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
+import { useState } from 'react'
+import './css/viewgame.css'
 
-function Views(props) {
+
+function Views() {
+    const [state, setState] = useState([])
+
+    const getData = async () => {
+        console.log('We got clicked')
+        const data = await fetch('/games')
+        console.log('DATA inital from backed', data)
+
+        const cleanData = await data.json()
+        console.log('STUFF FROM BACKNED!!', cleanData)
+        setState(cleanData)
+    }
+
+    console.log('State', state)
+
     return (
         <div>
-            {props.games.map(() => {
+            <button onClick={getData}>Let's see!</button>
+            {state.map((gameEntry) => {
                 return (
-                    <h1>Hello</h1>
+                    <div className='container'>
+                        <h3>{gameEntry.gamename}</h3>
+                        <h5>{gameEntry.genre}</h5>
+                        <p>{gameEntry.description}</p>
+                    </div>
 
                 )
             })}
+
+
         </div>
     )
 }
 
-export default Views;
+export default Views
 
 
 
@@ -23,51 +44,3 @@ export default Views;
 
 
 
-// import { useState } from 'react'
-
-
-
-// function GrabData() {
-//     const [state, setState] = useState([])
-
-//     const getData = async () => {
-//         console.log('We got clicked')
-//         const data = await fetch('/games')
-//         console.log('DATA inital from backed', data)
-
-//         const cleanData = await data.json()
-//         console.log('STUFF FROM BACKNED!!', cleanData)
-//         setState(cleanData)
-//     }
-
-//     console.log('State', state)
-
-//     return (
-//         <div>
-//             <button onClick={getData}>Let's see!</button>
-//             {state.map((gameEntry) => {
-//                 return (
-//                     <h2>{gameEntry}</h2>
-//                 )
-//             })}
-//         </div>
-//     )
-// }
-
-// export default GrabData
-
-
-
-
-{/* <div>
-                <Form.Label>Rating</Form.Label>
-                <Form.Select defaultValue="Choose...">
-                    <option>Rate the Game</option>
-                    <option>⭐️</option>
-                    <option>⭐️⭐️</option>
-                    <option>⭐️⭐️⭐️</option>
-                    <option>⭐️⭐️⭐️⭐️</option>
-                    <option>⭐️⭐️⭐️⭐️⭐️</option>
-                </Form.Select>
-                <button> Click Me </button>
-            </div> */}

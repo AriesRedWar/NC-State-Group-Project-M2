@@ -35,32 +35,29 @@ function AddGame() {
         <>
 
             <div className='intro'>
+                <h2>Do you have a game to share? </h2>
                 <h3>Add your game below!</h3>
             </div>
 
             <div className="formContainer">
                 <p style={{ textAlign: 'left' }}>Name of Game</p>
-                <input onChange={(e) => { setName(e.target.value) }} style={{ display: 'block' }}></input>
+                <input onChange={(e) => { setName(e.target.value) }} style={{ display: 'block' }} ></input>
                 <p style={{ textAlign: 'left' }}>Game Genre</p>
                 <input onChange={(e) => { setGenre(e.target.value) }} style={{ display: 'block' }}></input>
                 <p style={{ textAlign: 'left' }}>Game Description</p>
                 <textarea onChange={(e) => { setDescribe(e.target.value) }} style={{ display: 'block' }}></textarea>
-
-
             </div>
 
             <div className='button'>
                 <Button onClick={handleSave} type="submit" variant="secondary" size="lg">
                     Submit
                 </Button>
-            </div>
-
-            {/* Link this button to home page */}
-            <div className='button2'>
+                {/* Link to home page */}
                 <Button type="submit" variant="secondary" size="lg">
                     Cancel
                 </Button>
             </div>
+
         </>
 
     )
