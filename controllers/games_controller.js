@@ -27,18 +27,28 @@ router.get('/:id', (req, res) => {
         })
 })
 
+router.get("/:id", (req, res) => {
+  Game.find()
+    .then((foundGames) => {
+      res.json(foundGames);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
+});
 
 //Put/Patch Route
-router.put('/:id', (req, res) => {
-    Game.findOne()
-        .then(foundGames => {
-            res.json(foundGames)
-        })
-        .catch(err => {
-            console.log(err)
-            res.render('error404')
-        })
-})
+router.put("/:id", (req, res) => {
+  Game.findOne()
+    .then((foundGames) => {
+      res.json(foundGames);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
+});
 
 //Post Route
 router.post('/', (req, res) => {
@@ -55,15 +65,15 @@ router.post('/', (req, res) => {
 
 
 //Delete Route
-router.delete('/:id', (req, res) => {
-    Game.findByIdAndDelete(req.params.id)
-        .then(() => {
-            res.send('Delete was successful')
-        })
-        .catch(err => {
-            console.log(err)
-            res.render('error404')
-        })
-})
+router.delete("/:id", (req, res) => {
+  Game.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.send("Delete was successful");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
+});
 
-module.exports = router
+module.exports = router;

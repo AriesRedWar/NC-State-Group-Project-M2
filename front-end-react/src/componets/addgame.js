@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import './css/addgame.css'
 
+
 function AddGame() {
 
     //create states
@@ -11,6 +12,7 @@ function AddGame() {
 
     const handleSave = async () => {
         console.log('We got clicked!')
+            window.location.reload(false);          
         // const data = await fetch('/games')
         //         console.log('DATA inital from backed', data)
 
@@ -49,6 +51,7 @@ function AddGame() {
             </div>
 
             <div className='button'>
+
                 <Button onClick={handleSave} type="submit" variant="secondary" size="lg">
                     Submit
                 </Button>

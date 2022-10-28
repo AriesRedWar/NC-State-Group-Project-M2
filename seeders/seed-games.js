@@ -1,20 +1,19 @@
 const db = require("../models");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 require("dotenv").config();
 
-
 //MONGOOSE
-const MONGO_URI = process.env.MONGO_URI
+const MONGO_URI = process.env.MONGO_URI;
 mongoose.connect(
-  MONGO_URI, 
+  MONGO_URI,
   {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true
-  }, 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
   () => {
-    console.log(`connected to mongo: ${MONGO_URI}`)
+    console.log(`connected to mongo: ${MONGO_URI}`);
   }
-)
+);
 
 db.Game.create([
   {
@@ -22,6 +21,12 @@ db.Game.create([
     pic: "/Monopoly.jpg",
     gametype: "Board Game",
     genre: "family fun",
+  },
+  {
+    gamename: "Solitaire",
+    pic: "/Monopoly.jpg",
+    gametype: "Card Game",
+    genre: "Solo",
   },
 ])
   .then(() => {

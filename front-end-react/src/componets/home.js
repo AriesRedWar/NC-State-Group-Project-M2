@@ -1,4 +1,4 @@
-import './css/home.css'
+import "./css/home.css";
 const React = require("react");
 
 function Home() {
@@ -7,12 +7,10 @@ function Home() {
       <main>
         <h1 className="header">Home of the Games</h1>
         <div>
-          <img className="page_image"
-            src="./Game-2.png"
-            alt="Game logo" />
+          <img className="page_image" src="./Game-2.png" alt="Game logo" />
         </div>
         <div>
-          <div className='credit'>
+          <div className="credit">
             Photo by{" "}
             <a href="https://unsplash.com/@hannahrodrigo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
               Hannah Rodriguez
