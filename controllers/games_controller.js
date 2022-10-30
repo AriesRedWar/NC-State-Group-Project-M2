@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
         })
 })
 
-router.get("/:id", (req, res) => {
+router.get("/games/:id/edit", (req, res) => {
   Game.find()
     .then((foundGames) => {
       res.json(foundGames);
@@ -52,7 +52,6 @@ router.put("/:id", (req, res) => {
 
 //Post Route
 router.post('/', (req, res) => {
-    console.log(req.body)
     Game.create(req.body)
         .then((foundGames) => {
             res.json(foundGames)
@@ -65,7 +64,8 @@ router.post('/', (req, res) => {
 
 
 //Delete Route
-router.delete("/:id", (req, res) => {
+router.delete("/games/:id", (req, res) => {
+  console.log('WE SMACKED THE GET ROUTER /games:id !!!')
   Game.findByIdAndDelete(req.params.id)
     .then(() => {
       res.send("Delete was successful");
