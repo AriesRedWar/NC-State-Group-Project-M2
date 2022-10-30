@@ -41,9 +41,11 @@ router.get("/:id/edit", (req, res) => {
 
 //Put/Patch Route
 router.put("/:id", (req, res) => {
-  Game.findOne()
+  console.log("are you working?", req.params.id, req.body)
+  Game.findByIdAndUpdate(req.params.id, req.body)
     .then((foundGames) => {
-      res.json(foundGames);
+      console.log(foundGames)
+      res.status(foundGames);
     })
     .catch((err) => {
       console.log(err);
