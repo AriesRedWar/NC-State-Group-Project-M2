@@ -26,7 +26,7 @@ mongoose.connect(
 app.use(express.json());
 
 app.use("/games", gamesController);
-app.use("/games/:id", gamesController);
+
 
 // Controllers & Routes
 
