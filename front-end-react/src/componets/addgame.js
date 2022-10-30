@@ -3,12 +3,16 @@ import Button from 'react-bootstrap/Button';
 import './css/addgame.css'
 
 
-function AddGame() {
 
+
+function AddGame() {
     //create states
     const [name, setName] = useState('')
     const [genre, setGenre] = useState('')
     const [describe, setDescribe] = useState('')
+    const [image, setImage] = useState('')
+    const [gametype, setGameType] = useState('')
+
 
     const handleSave = async () => {
         console.log('We got clicked!')
@@ -25,7 +29,9 @@ function AddGame() {
             body: JSON.stringify({
                 gamename: name,
                 genre: genre,
-                description: describe
+                description: describe,
+                pic: image,
+                gametype: gametype,
             })
         };
         const data = await fetch('/games', requestOptions)
@@ -44,8 +50,12 @@ function AddGame() {
             <div className="formContainer">
                 <p style={{ textAlign: 'left' }}>Name of Game</p>
                 <input onChange={(e) => { setName(e.target.value) }} style={{ display: 'block' }} ></input>
+                <p style={{ textAlign: 'left' }}>Game Image</p>
+                <input type="url" onChange={(e) => { setImage(e.target.value) }} style={{ display: 'block' }}></input>
                 <p style={{ textAlign: 'left' }}>Game Genre</p>
                 <input onChange={(e) => { setGenre(e.target.value) }} style={{ display: 'block' }}></input>
+                <p style={{ textAlign: 'left' }}>Game Type</p>
+                <input onChange={(e) => { setGameType(e.target.value) }} style={{ display: 'block' }}></input>
                 <p style={{ textAlign: 'left' }}>Game Description</p>
                 <textarea onChange={(e) => { setDescribe(e.target.value) }} style={{ display: 'block' }}></textarea>
             </div>
