@@ -25,12 +25,11 @@ function Views() {
     <div className="row col-md-8">
       {state.map((gameEntry) => {
         return (
-          <div className="col-sm-6">
-            <div key={gameEntry._id} className="container">
+          <div key={gameEntry._id} className="col-sm-6">
+            <div  className="container">
               <h3>{gameEntry.gamename}</h3>
               <div className="row">
                 <div className="row col-sm-6">
-                  {" "}
                   <img
                     className="placeimg"
                     src={gameEntry.pic}
@@ -43,13 +42,12 @@ function Views() {
                         href={`/games/${gameEntry._id}/edit`}
                         className="btn btn-warning"
                       >
-                        {" "}
                         Edit{" "}
                       </a>
                     </form>
                   </div>
                   <div className="row">
-                    {" "}
+
                     <h5>Genre: {gameEntry.genre}</h5>
                   </div>
                 </div>
