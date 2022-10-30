@@ -21,12 +21,14 @@ db.Game.create([
     pic: "/Monopoly.jpg",
     gametype: "Board Game",
     genre: "family fun",
+    description: "wondefull board game for the family",
   },
   {
     gamename: "Solitaire",
-    pic: "/Monopoly.jpg",
+    pic: "/solitaire.png",
     gametype: "Card Game",
     genre: "Solo",
+    description: "stratagy card games",
   },
 ])
   .then(() => {
