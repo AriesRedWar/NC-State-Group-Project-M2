@@ -7,15 +7,15 @@ function Views() {
   const [state, setState] = useState([]);
 
   const getData = async () => {
-    // console.log("We got clicked");
+    console.log("We got clicked");
     const data = await fetch("/games");
-    // console.log("DATA inital from backed", data);
+    console.log("DATA inital from backed", data);
 
     const cleanData = await data.json();
-    // console.log("STUFF FROM BACKNED!!", cleanData);
+    console.log("STUFF FROM BACKNED!!", cleanData);
     setState(cleanData);
   };
-  //   console.log("State", state);
+  console.log("State", state);
 
   useEffect(() => {
     getData();
@@ -26,8 +26,8 @@ function Views() {
       {state.map((gameEntry) => {
         return (
           <div key={gameEntry._id} className="col-sm-6">
-            <div  className="container">
-            <a href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
+            <div className="container">
+              <a href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
               <div className="row">
                 <div className="row col-sm-6">
                   <img

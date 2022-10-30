@@ -10,9 +10,9 @@ import Navbar from 'react-bootstrap/Navbar';
 const NavBar = () => {
     return (
         <Navbar bg="dark" variant="dark">
-            <img className="logo"
+            {/* <img className="logo"
                 src="./logo.jpeg"
-                alt="logo" />
+                alt="logo" /> */}
             <Navbar.Brand href="/">Home of the Games</Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link href="/" element={<Home />}>Games Home Page</Nav.Link>

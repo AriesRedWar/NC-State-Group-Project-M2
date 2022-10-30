@@ -10,7 +10,7 @@ const gamesController = require("./controllers/games_controller");
 //MONGOOSE
 const MONGO_URI = process.env.MONGO_URI;
 mongoose.connect(
-  MONGO_URI, 
+  MONGO_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -29,6 +29,8 @@ app.use("/games", gamesController);
 
 
 // Controllers & Routes
+//app.use("/games/:id", gamesController)
+
 
 // Listen for Connections
 app.listen(process.env.PORT);
