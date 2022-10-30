@@ -5,30 +5,30 @@ const Game = require('../models/games')
 
 //Index/Get Route
 router.get('/', (req, res) => {
-    console.log('WE SMACKED THE GET ROUTER /games !!!')
-    Game.find()
-        .then(foundGames => {
-            res.json(foundGames)    //res.render
-        })
-        .catch(err => {
-            console.log(err)
-            res.json('error404')
-        })
+  console.log('WE SMACKED THE GET ROUTER /games !!!')
+  Game.find()
+    .then(foundGames => {
+      res.json(foundGames)    //res.render
+    })
+    .catch(err => {
+      console.log(err)
+      res.json('error404')
+    })
 })
 
-router.get('/games/:id', (req, res) => {
-  console.log('WE SMACKED THE GET ROUTER /games/:id !!!')
-    Game._id.findById(req.params._id)
-        .then(foundGames => {
-            res.json(foundGames)
-        })
-        .catch(err => {
-            console.log(err)
-            res.render('error404')
-        })
+router.get('/:id', (req, res) => {
+  console.log('WE SMACKED THE GET ROUTER /games/:id  FIN ONE!!!!!!', req.params)
+  Game.findById(req.params.id)
+    .then(foundGames => {
+      res.json(foundGames)
+    })
+    .catch(err => {
+      console.log(err)
+      res.render('error404')
+    })
 })
 
-router.get("/games/:id/edit", (req, res) => {
+router.get("/:id/edit", (req, res) => {
   Game.find()
     .then((foundGames) => {
       res.json(foundGames);
@@ -53,20 +53,20 @@ router.put("/:id", (req, res) => {
 
 //Post Route
 router.post('/', (req, res) => {
-    Game.create(req.body)
-        .then((foundGames) => {
-            res.json(foundGames)
-        })
-        .catch(err => {
-            console.log(err)
-            res.render('error404')
-        })
+  Game.create(req.body)
+    .then((foundGames) => {
+      res.json(foundGames)
+    })
+    .catch(err => {
+      console.log(err)
+      res.render('error404')
+    })
 })
 
 
 //Delete Route
-router.delete("/games/:id", (req, res) => {
-  console.log('WE SMACKED THE GET ROUTER /games:id !!!')
+router.delete("/:id", (req, res) => {
+  console.log(' DELETE ROUTE!!!! WE SMACKED THE GET ROUTER /games:id !!!')
   Game.findByIdAndDelete(req.params.id)
     .then(() => {
       res.send("Delete was successful");
