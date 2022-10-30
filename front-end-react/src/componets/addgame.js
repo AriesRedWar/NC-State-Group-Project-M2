@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import './css/addgame.css'
-
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -12,11 +12,13 @@ function AddGame() {
     const [describe, setDescribe] = useState('')
     const [image, setImage] = useState('')
     const [gametype, setGameType] = useState('')
+    const navigate = useNavigate();
 
 
     const handleSave = async () => {
         console.log('We got clicked!')
-            window.location.reload(false);          
+        window.location.reload(false);
+        navigate('/game');
         // const data = await fetch('/games')
         //         console.log('DATA inital from backed', data)
 
@@ -65,10 +67,13 @@ function AddGame() {
                 <Button onClick={handleSave} type="submit" variant="secondary" size="lg">
                     Submit
                 </Button>
+
+
                 {/* Link to home page */}
                 <Button type="submit" variant="secondary" size="lg">
                     Cancel
                 </Button>
+                {/* navigate('/game'); */}
             </div>
 
         </>
