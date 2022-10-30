@@ -16,8 +16,9 @@ router.get('/', (req, res) => {
         })
 })
 
-router.get('/:id', (req, res) => {
-    Game.find()
+router.get('/games/:id', (req, res) => {
+  console.log('WE SMACKED THE GET ROUTER /games/:id !!!')
+    Game._id.findById(req.params._id)
         .then(foundGames => {
             res.json(foundGames)
         })

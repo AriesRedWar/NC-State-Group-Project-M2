@@ -2,12 +2,12 @@ import React from "react";
 import {useState, useEffect} from "react";
 import "./css/viewgame.css";
 
-function ViewsEdit() {
+function ViewsShow() {
   const [state, setState] = useState([]);
 
   const getData = async () => {
     // console.log("We got clicked");
-    const data = await fetch("/games/{gameEntry._id}/edit");
+    const data = await fetch("/games/{gameEntry._id}");
     // console.log("DATA inital from backed", data);
 
     const cleanData = await data.json();
@@ -53,4 +53,4 @@ function ViewsEdit() {
   );
 }
 
-export default ViewsEdit;
+export default ViewsShow;

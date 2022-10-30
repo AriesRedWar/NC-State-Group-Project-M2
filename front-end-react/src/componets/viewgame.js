@@ -27,7 +27,7 @@ function Views() {
         return (
           <div key={gameEntry._id} className="col-sm-6">
             <div  className="container">
-              <h3>{gameEntry.gamename}</h3>
+            <a href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
               <div className="row">
                 <div className="row col-sm-6">
                   <img
@@ -35,17 +35,7 @@ function Views() {
                     src={gameEntry.pic}
                     alt={gameEntry.gamename}
                   />
-                  <div className="row col-sm-6">
-                    <form id="btn" method="POST">
-                      <a
-                        type="click"
-                        href={`/games/${gameEntry._id}/edit`}
-                        className="btn btn-warning"
-                      >
-                        Edit{" "}
-                      </a>
-                    </form>
-                  </div>
+
                   <div className="row">
 
                     <h5>Genre: {gameEntry.genre}</h5>
