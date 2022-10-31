@@ -19,16 +19,14 @@ db.Game.create([
   {
     gamename: "Monopoly",
     pic: "/Monopoly.jpg",
-    gametype: "Board Game",
-    genre: "family fun",
-    description: "wondefull board game for the family",
+    genre: "Board game",
+    description: "Monopoly is a situation where there is a single seller in the market. In conventional economic analysis, the monopoly case is taken as the polar opposite of perfect competition. By definition, the demand curve facing the monopolist is the industry demand curve which is downward sloping.",
   },
   {
     gamename: "Solitaire",
     pic: "/solitaire.png",
-    gametype: "Card Game",
-    genre: "Solo",
-    description: "stratagy card games",
+    genre: "Playing card game",
+    description: "Patience, card solitaire or solitaire, is a genre of card games whose common feature is that the aim is to arrange the cards in some systematic order or, in a few cases, to pair them off in order to discard them.",
   },
 ])
   .then(() => {
