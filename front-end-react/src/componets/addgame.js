@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./css/addgame.css";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 function AddGame() {
   //create states

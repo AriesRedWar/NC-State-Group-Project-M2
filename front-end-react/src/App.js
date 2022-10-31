@@ -5,25 +5,28 @@ import Views from "./componets/viewgame";
 import Addgame from "./componets/addgame";
 import Editgame from "./componets/editgame";
 import Showgame from "./componets/ShowGame";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter, Router, Routes, Route } from "react-router-dom";
 import NavBar from "./componets/navbar";
 import NotFound from "./componets/error404";
+import React from "react";
 
 function App() {
   return (
     <main>
+
       <NavBar />
-      <Router>
+      <BrowserRouter>
+           <Router>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/game" element={<Views />} />
-              <Route path="/addgame" element={<Addgame />} />
-              <Route path="/games/:id/edit" element={<Editgame />} />
-              <Route path="/games/:id" element={<Showgame />} />
-              <Route path="*" element={<NotFound />} />
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/game" element={<Views />} />
+              <Route exact path="/addgame" element={<Addgame />} />
+              <Route exact path="/games/:id/edit" element={<Editgame />} />
+              <Route exact path="/games/:id" element={<Showgame />} />
+              <Route exact path="*" element={<NotFound />} />
             </Routes>
       </Router>
-
+      </BrowserRouter>
       <footer className="footer">
         <h4>
           Site created by: <br />
@@ -38,7 +41,9 @@ function App() {
           Michael Manley <a href="https://github.com/execchef23">GitHub</a>
         </h4>
       </footer>
+
     </main>
+    
   );
 }
 

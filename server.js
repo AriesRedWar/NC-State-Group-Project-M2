@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+const path = require('path')
 const gamesController = require("./controllers/games_controller");
 
 
@@ -25,11 +25,15 @@ mongoose.connect(
 
 app.use(express.json());
 
-app.use("/games", gamesController);
+app.use("/", gamesController);
 
+app.use(express.static(path.join(__dirname, 'front-end-react', 'build')))
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'front-end-react', 'build', "index.html"))
+})
 // Controllers & Routes
-//app.use("/games/:id", gamesController)
+// app.use("/games/:id", gamesController)
 
 
 // Listen for Connections
