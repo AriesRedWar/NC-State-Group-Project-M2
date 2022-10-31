@@ -21,8 +21,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/game" element={<Views />} />
               <Route path="/addgame" element={<Addgame />} />
-              <Route path="/game/:id/edit" element={<Editgame />} />
-              <Route path="/game/:id" element={<Showgame />} />
+              <Route path="/games/:id/edit" element={<Editgame />} />
+              <Route path="/games/:id" element={<Showgame />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             </Router>

@@ -30,6 +30,7 @@ function Views() {
               <a className="link" href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
               <div className="row">
                   <img
+                  type="url"
                     src={gameEntry.pic}
                     className="placeimg"
                     alt={gameEntry.gamename}
