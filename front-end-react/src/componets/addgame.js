@@ -11,6 +11,10 @@ function AddGame() {
   const [image, setImage] = useState("");
   const navigate = useNavigate();
 
+  const reload = async () => {
+    navigate("/");
+  };
+
   const handleSave = async () => {
     console.log("We got clicked!");
     // window.location.reload(false);
@@ -50,6 +54,7 @@ function AddGame() {
             setName(e.target.value);
           }}
           style={{ display: "block" }}
+          value={name}
         />
         <label style={{ textAlign: "left" }}>Game Image</label>
         <input
@@ -58,6 +63,7 @@ function AddGame() {
             setImage(e.target.value);
           }}
           style={{ display: "block" }}
+          value={image}
         />
         <label style={{ textAlign: "left" }}>Game Genre</label>
         <input
@@ -65,6 +71,7 @@ function AddGame() {
             setGenre(e.target.value);
           }}
           style={{ display: "block" }}
+          value={genre}
         />
         <label style={{ textAlign: "left" }}>Game Description</label>
         <textarea
@@ -72,18 +79,20 @@ function AddGame() {
             setDescribe(e.target.value);
           }}
           style={{ display: "block" }}
+          value={describe}
         />
       </div>
       <div className="button">
         <Button
           onClick={handleSave}
           type="submit"
+          disabled={!name || !describe || !genre || !image}
           variant="secondary"
           size="lg"
         >
           Submit
         </Button>
-        <Button type="submit" variant="secondary" size="lg">
+        <Button type="cancel" onClick={reload} variant="secondary" size="lg">
           Cancel
         </Button>
       </div>
