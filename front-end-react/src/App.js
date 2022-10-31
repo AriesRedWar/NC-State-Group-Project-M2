@@ -11,12 +11,7 @@ import NotFound from "./componets/error404";
 
 function App() {
   return (
-    <div>
-              <header>
-          <div className="home"></div>
-          <div className="display">
-          </div>
-        </header>
+    <main>
       <NavBar />
       <Router>
             <Routes>
@@ -43,7 +38,7 @@ function App() {
           Michael Manley <a href="https://github.com/execchef23">GitHub</a>
         </h4>
       </footer>
-    </div>
+    </main>
   );
 }
 

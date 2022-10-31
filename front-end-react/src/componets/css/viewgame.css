@@ -1,22 +1,45 @@
 .container {
     background-color:rgb(218, 210, 210);
     border: 5px black solid;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
     font-family: Pangolin;
     padding: 1em;
     display: inline-block;
 }
-
-
+.link {
+    font-weight: bold;
+    font-family: Edu NS ACT Foundation;
+    font-size: 2.3em;
+    text-shadow: 2px 2px #0a0a0a;
+    text-align: center;
+}
 h3 {
     font-weight: bold;
     font-family: Edu NS ACT Foundation;
+    display: flex;
+    flex-direction: row;
 }
 
 .placeimg {
-    width: 50%;
+    width: auto;
+    height: 200px;
+    align-items: center;
+}
+.placeimg2 {
+    width: 20%;
     height: auto;
-    justify-items: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.edit {
+    padding: 1em;
 }

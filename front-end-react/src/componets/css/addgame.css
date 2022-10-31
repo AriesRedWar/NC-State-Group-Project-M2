@@ -2,10 +2,10 @@
     /* margin-top: 10%; */
     background-color:rgb(80, 185, 226);
     border: 5px black solid;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     font-family: Orbitron;
-    padding: 2em;
+    padding: 1em;
 
 }
 input {
@@ -16,25 +16,36 @@ textarea {
     width: 100%;
 }
 
-
+label {
+    font-family: Pangolin;
+    color: rgb(80, 185, 226);
+    background-color:rgb(7, 7, 7);
+    border: 1px black solid;
+    margin-top: 7px;
+    padding:0.1%;
+}
 h2 {
     margin-top: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-family: Pangolin;
 }
 h3 {
-    margin-bottom: 5%;
-    text-align: center;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
     font-family: Pangolin;
 }
 
 .btn-secondary {
     background-color: black;
+    
+    
 }
 
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 1em;
 }
