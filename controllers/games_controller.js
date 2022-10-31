@@ -4,7 +4,7 @@ const Game = require('../models/games')
 
 
 //Index/Get Route
-router.get('/games', async  (req, res) => {
+router.get('/', (req, res) => {
   console.log('WE SMACKED THE GET ROUTER /games !!!')
   Game.find()
     .then(foundGames => {
@@ -16,7 +16,7 @@ router.get('/games', async  (req, res) => {
     })
 })
 
-router.get('/games/:id', async  (req, res) => {
+router.get('/:id', (req, res) => {
   console.log('WE SMACKED THE GET ROUTER /games/:id  FIND ONE!!!!!!', req.params)
   Game.findById(req.params.id)
     .then(foundGames => {
@@ -55,6 +55,7 @@ router.put("/:id", (req, res) => {
 
 //Post Route
 router.post('/', (req, res) => {
+  console.log("are you working? New game", req.params.id, req.body)
   Game.create(req.body)
     .then((foundGames) => {
       res.json(foundGames)

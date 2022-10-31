@@ -3,18 +3,19 @@ import { useState, useEffect } from "react";
 import "./css/viewgame.css";
 import "react-bootstrap/Container";
 
+
 function Views() {
   const [state, setState] = useState([]);
 
   const getData = async () => {
     // console.log("We got clicked");
     const data = await fetch("/games");
-    console.log("DATA inital from backed", data);
+    // console.log("DATA inital from backed", data);
     const cleanData = await data.json();
-    console.log("STUFF FROM BACKNED!!", cleanData);
+    // // console.log("STUFF FROM BACKNED!!", cleanData);
     setState(cleanData);
   };
-//   console.log("State", state);
+  console.log("State", state);
 
   useEffect(() => {
     getData();
@@ -29,8 +30,8 @@ function Views() {
               <a className="link" href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
               <div className="row">
                   <img
-                    className="placeimg"
                     src={gameEntry.pic}
+                    className="placeimg"
                     alt={gameEntry.gamename}
                   />
                     <h4>Genre: {gameEntry.genre}</h4>
