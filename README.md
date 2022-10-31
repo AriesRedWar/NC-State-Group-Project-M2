@@ -1,6 +1,3 @@
-# NC-State-Group-Project-M2
-Milestone Project 2
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
@@ -30,24 +27,19 @@ Milestone Project 2
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/AriesRedWar/NC-State-Group-Project-M2">
+    <img src="./front-end-react/public/Game.jpg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center"># NC-State-Group-Project-M2
+
+</h3>
 
   <p align="center">
-    project_description
+    Milestone Project 2 (Games Rant)
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AriesRedWar/NC-State-Group-Project-M2"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
 </div>
 
 
