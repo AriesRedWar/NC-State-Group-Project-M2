@@ -46,8 +46,7 @@ function ViewsShow() {
 
   return (
     <div>
-      <h1> View page</h1>
-      {/* <div key={id} className="container">
+      <div key={id} className="container">
         <h1>{state.gamename}</h1>
         <img className="placeimg2" src={state.pic} alt={state.gamename} />
         <h4>Genre: {state.genre}</h4>
@@ -66,7 +65,7 @@ function ViewsShow() {
             Delete
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
