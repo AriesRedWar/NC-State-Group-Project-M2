@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  console.log('WE SMACKED THE GET ROUTER /games/:id  FIND ONE!!!!!!', req.params)
+  console.log('WE SMACKED THE GET ROUTER /games/:id', req.params)
   Game.findById(req.params.id)
     .then(foundGames => {
       res.json(foundGames)
