@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import "./css/viewgame.css";
 import "react-bootstrap/Container";
 
+
 function Views() {
   const [state, setState] = useState([]);
 
   const getData = async () => {
-    console.log("We got clicked");
+    // console.log("We got clicked");
     const data = await fetch("/games");
-    console.log("DATA inital from backed", data);
-
+    // console.log("DATA inital from backed", data);
     const cleanData = await data.json();
-    console.log("STUFF FROM BACKNED!!", cleanData);
+    // // console.log("STUFF FROM BACKNED!!", cleanData);
     setState(cleanData);
   };
   console.log("State", state);
@@ -27,26 +27,19 @@ function Views() {
         return (
           <div key={gameEntry._id} className="col-sm-6">
             <div className="container">
-              <a href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
+              <a className="link" href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
               <div className="row">
-                <div className="row col-sm-6">
                   <img
-                    className="placeimg"
+                  type="url"
                     src={gameEntry.pic}
+                    className="placeimg"
                     alt={gameEntry.gamename}
                   />
-
-                  <div className="row">
-
-                    <h5>Genre: {gameEntry.genre}</h5>
-                  </div>
-                </div>
-                {/* <div className="row"> */}{" "}
-                <p> Description: {gameEntry.description}</p>
+                    <h4>Genre: {gameEntry.genre}</h4>
+                {/* <p> Description: {gameEntry.description}</p> */}
               </div>
             </div>
           </div>
-          // </div>
         );
       })}
     </div>
