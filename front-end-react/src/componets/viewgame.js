@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import "./css/viewgame.css";
 import "react-bootstrap/Container";
 
@@ -27,7 +28,7 @@ function Views() {
         return (
           <div key={gameEntry._id} className="col-sm-6">
             <div className="container">
-              <a className="link" href={`/games/${gameEntry._id}`}> {gameEntry.gamename}</a>
+              <Link className="link" to={`/games/${gameEntry._id}`}> {gameEntry.gamename}</Link>
               <div className="row">
                   <img
                   type="url"
