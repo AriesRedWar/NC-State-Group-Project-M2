@@ -28,9 +28,5 @@ app.use(express.json());
 app.use("/games", gamesController);
 
 
-// Controllers & Routes
-//app.use("/games/:id", gamesController)
-
-
 // Listen for Connections
 app.listen(process.env.PORT);

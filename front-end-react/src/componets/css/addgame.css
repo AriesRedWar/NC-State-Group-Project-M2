@@ -10,6 +10,7 @@
 }
 input {
     width: 100%;
+    margin-bottom: 3%;
 }
 
 textarea {
@@ -25,7 +26,6 @@ h2 {
 h3 {
     margin-bottom: 5%;
     text-align: center;
-    font-family: Pangolin;
 }
 
 .btn-secondary {

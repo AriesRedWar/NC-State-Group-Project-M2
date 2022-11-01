@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./css/viewgame.css";
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 
 function ViewsEdit() {
@@ -11,6 +13,7 @@ function ViewsEdit() {
   const [describe, setDescribe] = useState('')
   const [image, setImage] = useState('')
   const [gametype, setGameType] = useState('')
+  const navigate = useNavigate();
   let { id } = useParams()
 
 
@@ -51,6 +54,7 @@ function ViewsEdit() {
     // fetch !!
     const data = await fetch("/games/" + id, requestOptions);
     console.log('Data!!! from edit', data)
+    navigate('/game');
   }
 
 

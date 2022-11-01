@@ -18,7 +18,7 @@ function AddGame() {
     const handleSave = async () => {
         console.log('We got clicked!')
         window.location.reload(false);
-        navigate('/game');
+        navigate("/game");
         // const data = await fetch('/games')
         //         console.log('DATA inital from backed', data)
 
@@ -50,15 +50,15 @@ function AddGame() {
             </div>
 
             <div className="formContainer">
-                <p style={{ textAlign: 'left' }}>Name of Game</p>
+                <h5 style={{ textAlign: 'left' }}>Name of Game</h5>
                 <input onChange={(e) => { setName(e.target.value) }} style={{ display: 'block' }} ></input>
-                <p style={{ textAlign: 'left' }}>Game Image</p>
+                <h5 style={{ textAlign: 'left' }}>Game Image</h5>
                 <input type="url" onChange={(e) => { setImage(e.target.value) }} style={{ display: 'block' }}></input>
-                <p style={{ textAlign: 'left' }}>Game Genre</p>
+                <h5 style={{ textAlign: 'left' }}>Game Genre</h5>
                 <input onChange={(e) => { setGenre(e.target.value) }} style={{ display: 'block' }}></input>
-                <p style={{ textAlign: 'left' }}>Game Type</p>
+                <h5 style={{ textAlign: 'left' }}>Game Type</h5>
                 <input onChange={(e) => { setGameType(e.target.value) }} style={{ display: 'block' }}></input>
-                <p style={{ textAlign: 'left' }}>Game Description</p>
+                <h5 style={{ textAlign: 'left' }}>Game Description</h5>
                 <textarea onChange={(e) => { setDescribe(e.target.value) }} style={{ display: 'block' }}></textarea>
             </div>
 
