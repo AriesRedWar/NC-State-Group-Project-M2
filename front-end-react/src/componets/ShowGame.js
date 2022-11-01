@@ -4,6 +4,7 @@ import "./css/viewgame.css";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+
 function ViewsShow() {
   let { id } = useParams();
   const navigate = useNavigate();

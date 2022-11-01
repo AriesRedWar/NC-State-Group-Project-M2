@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 
 function AddGame() {
+
   //create states
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");

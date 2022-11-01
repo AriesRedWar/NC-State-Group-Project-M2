@@ -9,6 +9,7 @@
     padding: 1em;
     display: inline-block;
 }
+
 .link {
     font-weight: bold;
     font-family: Edu NS ACT Foundation;
@@ -31,6 +32,7 @@ h3 {
 .placeimg2 {
     width: 20%;
     height: auto;
+
     align-items: center;
 }
 
